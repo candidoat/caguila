@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Selección</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #7c9897;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background: #81afac;
+            padding: 70px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            display: grid;
+            gap: 15px;
+        }
+
+        .form-container h2 {
+            margin: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        button {
+            background: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4cae4c;
+        }
+
+        .menu-container {
+            position: fixed;
+            /* Hacer que el botón esté fijo en la parte superior */
+            top: 10px;
+            right: 10px;
+            z-index: 100;
+        }
+
+        .menu-btn {
+            background-color: #4a7c7a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .menu-btn:hover {
+            background-color: #035f6d;
+        }
+
+        /* Submenú */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            border: 1px solid #4a7c7a;
+            border-radius: 5px;
+            min-width: 150px;
+            z-index: 1000;
+        }
+
+        .submenu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #4a7c7a;
+            font-weight: bold;
+        }
+
+        .submenu a:hover {
+            background-color: #035f6d;
+            color: white;
+        }
+
+        /* Mostrar el submenú cuando el ratón está sobre el botón */
+        .menu-container:hover .submenu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Menú desplegable -->
+    <div class="menu-container">
+        <button class="menu-btn">Menús</button>
+        <div class="submenu">
+            <a href="index.html">Inicio</a>
+            <a href="horario.html">Horario</a>
+            <a href="galeria.html">Galería</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=caguilat@gmail.com">Contacto</a>
+            <a href="formulario.html">Formulario</a>
+        </div>
+    </div>
+    <form class="form-container" action="https://alumnat.cat/form" method="POST" enctype="multipart/form-data">
+        <h2>Seleccionar Nuevo Trabajador</h2>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos" required>
+
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" min="18" max="100" placeholder="Introduce tu edad" required>
+
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" name="dni" placeholder="Introduce tu DNI" required>
+
+        <label for="color">Color Preferido</label>
+        <input type="color" id="color" name="color">
+
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Introduce tu email" required>
+
+        <label for="estudios">Estudios</label>
+        <select id="estudios" name="estudios" required>
+            <option value="">Selecciona tus estudios</option>
+            <option value="secundaria">Secundaria</option>
+            <option value="bachillerato">Bachillerato</option>
+            <option value="grado_medio">Grado Medio</option>
+            <option value="grado_superior">Grado Superior</option>
+            <option value="universidad">Universidad</option>
+        </select>
+
+        <label>Sexo</label>
+        <div>
+            <input type="radio" id="masculino" name="sexo" value="masculino" required>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="femenino" name="sexo" value="femenino" required>
+            <label for="femenino">Femenino</label>
+        </div>
+
+        <label for="explicacion">Explicación</label>
+        <textarea id="explicacion" name="explicacion" placeholder="Explícanos por qué quieres unirte"
+            required></textarea>
+
+        <div>
+            <input type="checkbox" id="politica" name="politica" required>
+            <label for="politica">Acepto la política de privacidad</label>
+        </div>
+
+        <label for="foto">Adjuntar Fotografía</label>
+        <input type="file" id="foto" name="foto" accept="image/*" optional>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

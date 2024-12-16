@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <link rel="icon" href="recursos/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/galeria.js"></script>
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header>
+        <h1>Galería de Imágenes</h1>
+        <h2>Una selección de fotos que representan mis pasatiempos y vivencias</h2>
+    </header>
+
+    <!-- Menú desplegable -->
+    <div class="menu-container">
+        <button class="menu-btn">Menús</button>
+        <div class="submenu">
+            <a href="index.html">Inicio</a>
+            <a href="horario.html">Horario</a>
+            <a href="galeria.html">Galería</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=caguilat@gmail.com">Contacto</a>
+            <a href="formulario.html">Formulario</a>
+        </div>
+    </div>
+
+    <!-- Carrusel de imágenes -->
+    <div class="carousel">
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+        <div class="carousel-content">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsAONkCZWID22K4WD9Aa-pGjImdw_cfAacpQ&s"
+                alt="Videojuegos">
+            <h3>Videojuegos</h3>
+            <p>Disfruto explorando mundos digitales y enfrentando retos únicos.</p>
+        </div>
+        <button class="next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <!-- Sección de Video -->
+    <div class="video-section">
+        <h2>Anuncios</h2>
+        <p>Este video muestra una recopilación de mis pasatiempos favoritos.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XVcxZx3uQxY?si=oe8tYzQw5HjqUZWT"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 Galería Personal. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

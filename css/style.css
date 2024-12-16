@@ -1,0 +1,246 @@
+/* Estilo básico para el cuerpo */
+body {
+    background-color: #6d9896;
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    color: #333333;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Evitar desplazamiento horizontal */
+    margin-bottom: 80px;
+    /* Aseguramos que haya espacio suficiente para el contenido */
+}
+
+/* Cabecera */
+header {
+    text-align: center;
+    background-color: #4a7c7a;
+    padding: 20px;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px rgba(21, 208, 124, 0.3);
+}
+
+header h2,
+header h3 {
+    font-size: 24px;
+    font-style: italic;
+    color: #ffffff;
+}
+
+/* Estilo para las tablas del horario */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #4a7c7a;
+}
+
+th {
+    background-color: #4a7c7a;
+    color: white;
+    font-size: 16px;
+}
+
+td {
+    font-size: 14px;
+}
+
+/* Colores alternados en las filas */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Estilo del botón Menú */
+.menu-container {
+    position: fixed;
+    /* Hacer que el botón esté fijo en la parte superior */
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+}
+
+.menu-btn {
+    background-color: #4a7c7a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.menu-btn:hover {
+    background-color: #035f6d;
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #4a7c7a;
+    border-radius: 5px;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #4a7c7a;
+    font-weight: bold;
+}
+
+.submenu a:hover {
+    background-color: #035f6d;
+    color: white;
+}
+
+/* Mostrar el submenú cuando el ratón está sobre el botón */
+.menu-container:hover .submenu {
+    display: block;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #4a7c7a;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Evitar que el footer bloquee el contenido */
+main {
+    padding: 20px;
+    background-color: #e6f7f7;
+    margin-bottom: 60px;
+    /* Espacio suficiente para no cubrirse con el footer */
+}
+
+/* Añadir margen inferior al cuerpo para el scroll */
+body {
+    margin-bottom: 80px;
+    /* Aseguramos que haya espacio suficiente para el contenido */
+}
+/* Estilo del carrusel */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-content {
+    text-align: center;
+}
+
+.carousel-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel-content h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #035f6d;
+}
+
+.carousel-content p {
+    font-size: 14px;
+    color: #333;
+}
+
+button.prev,
+button.next {
+    background-color: #4a7c7a;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+button.prev {
+    left: -40px;
+}
+
+button.next {
+    right: -40px;
+}
+
+button.prev:hover,
+button.next:hover {
+    background-color: #035f6d;
+}
+
+.video-section {
+    margin: 30px auto;
+    text-align: center;
+    background-color: #f0f8ff; /* Fondo azul claro */
+    padding: 20px;
+    border: 2px solid #6d9896;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-section h2 {
+    color: #035f6d;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.video-section p {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
